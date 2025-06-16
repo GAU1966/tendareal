@@ -1,1 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lasagne</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
 
+    .bandeira {
+      display: flex;
+      height: 10px;
+    }
+
+    .bandeira div {
+      flex: 1;
+    }
+
+    .verde { background-color: #009246; }
+    .branco { background-color: #F1F2F1; }
+    .vermelho { background-color: #CE2B37; }
+
+    header {
+      background-color: #b30000;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a, nav span.glf-button {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: 2px solid white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    nav span.glf-button {
+      background-color: orange;
+      border: 2px solid orange;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .intro img {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .intro p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .alma {
+      background-color: #1b5e20;
+      color: white;
+    }
+
+    .alma p {
+      font-size: 1.3rem;
+    }
+
+    .glf-button {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .cardapio-item {
+      text-align: left;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1.5rem;
+    }
+
+    .cardapio-item img {
+      float: right;
+      width: 100px;
+      height: auto;
+      margin-left: 1rem;
+      border-radius: 8px;
+    }
+ .bandeira, header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.bandeira {
+  top: 0;
+}
+
+header {
+  top: 10px; /* logo abaixo da bandeira */
+}
+
+body {
+  padding-top: 150px; /* espaço reservado para a bandeira + header */
+}
+.bottom-bar-cardapio {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 500; /* menor que o WhatsApp (z-index: 999) */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+
+  <div class="bandeira">
+    <div class="verde"></div>
+    <div class="branco"></div>
+    <div class="vermelho"></div>
+  </div>
+ <header>
+  <a href="index.html" class="logo">
+    <img src="logo1t.png" alt="Lasagne" style="max-height: 60px;">
+  </a>
+  <nav>
+    <a href="entrega.html">Área de Entrega</a>
+    <a href="contato.html">Contato</a>
+    <span class="glf-button"
+      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+      Ver Cardápio e Pedir
+    </span>
+  </nav>
+</header>
+  
+
+  <section>
+    <h2 style="font-size: 2rem;">Nosso Cardápio</h2>
+    <p style="font-size: 1.3rem;">Aqui você encontra todas as nossas lasanhas artesanais feitas com carinho e tradição italiana.</p>
+
+    <div class="cardapio-item">
+      <img src="nonna.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Da Nonna</strong><br>
+      Um abraço de lasanha.→  simples, clássica, como aquela que só a vó sabe fazer.→ Receita clássica de ragù alla bolognese com carne moída bovina e suína, sofrito, tomate e vinho. Cozido longo e suave, com bechamel e muito muçarela. OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+    <div class="cardapio-item">
+      <img src="serra.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Da Serra</strong><br>
+      Farta, saborosoa e tradicional.→ Ragù alla bolognese clássico: carne moída bovina e suína refogada com sofrito, tomate e vinho, cozido por horas. Com presunto, bechamel e muçarela. Receita farta e reconfortante como as mesas da Serra Gaúcha.  OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+     </div>
+    <div class="cardapio-item">
+      <img src="colonia.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Della Colonia</strong><br>
+     Frango com ervilha no molho de tomate, presunto, bechamel, muçarela . → Uma receita inspirada na mesa farta das cozinhas de nossos imigrantes italianos. Frango com ervilhas, presunto artesanal, molho cremoso e generosas camadas de muçarela. OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+    </div>
+    <div class="cardapio-item">
+      <img src="presunto.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Prociutto e Formaggio</strong><br>
+      Presunto, bechamel, muçarela. → Um clássico sem erro. Presunto e queijos derretidos entre massa fresca e molho branco. Simples, direta e irresistível.   OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+    </div>
+    <div class="cardapio-item">
+      <img src="brocoli.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Broccoli e Ricotta</strong><br>
+      Brócolis, creme de ricota e parmesão, bechamel, muçarela. → Uma combinação surpreendente e delicada: brócolis no vapor com ricota temperada, parmesão e bechamel leve. Cremosa e suave.  OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+     </div>
+    <div class="cardapio-item">
+      <img src="allanorma.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Alla Norma</strong><br>
+     Berinjela, creme de ricota e parmesão, molho de tomate, manjericão fresco, muçarela. → Um tributo à Sicília: berinjela grelhada, molho de tomate fresco, ricota cremosa e folhas de manjericão. Rústica, perfumada e cheia de caráter.   OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+     </div>
+    <div class="cardapio-item">
+      <img src="file.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Filetto e Funghi al Vino</strong><br>
+      Escalopes de filé mignon, funghi secchi, bechamel,  molho de vinho, muçarela, parmesão. → Lasanha nobre e intensa, com filé mignon selado, cogumelos secos e um molho de vinho profundo e envolvente. Raffinata per momenti speciali.   OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+     </div>
+    
+     </div>
+    <div class="cardapio-item">
+      <img src="napoletana.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Napoletana</strong><br>
+      Rica e intensa.→ Vera ricetta di Ragù Napolitano, com carnes bovina e suína em pedaços, cozido por horas no tomate, linguiça toscana, ovos cozidos, polpettine de carne, creme de ricota e parmesão, muçarela, Um banquete em camadas da Cucina Partenopea.  OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+     </div>
+    <div class="cardapio-item">
+      <img src="carbonara.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
+      <strong>Carbonara al Forno</strong><br>
+      Bacon, creme de queijos e ovos, muçarela. → A clássica Carbonara em versão gratinada: cremosa, dourada e marcante. Bacon crocante, ovos e queijos num casamento perfeito.   OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
+      1Kg - R$000,00<br>
+      500g – R$000,00
+    </div>
+     
+    <!-- Adicione aqui os outros itens seguindo o mesmo modelo acima -->
+
+  </section>
+
+<footer style="background-color: #1b5e20; color: white; font-size: 0.65rem; padding: 1rem 0 2rem;">
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1000px; margin: 0 auto; padding: 0 1rem;">
+
+    <div style="flex: 1 1 250px; margin-bottom: 0.5rem;">
+      <strong>Horário de funcionamento:</strong><br>
+      Seg - Sáb: 10h - 17h<br>
+      <strong>Entrega:</strong><br>
+      Seg - Sáb: 11h - 21h
+    </div>
+
+    <div style="flex: 1 1 250px; margin-bottom: 0.5rem;">
+      <strong>Formas de pagamento:</strong><br>
+      Dinheiro (Delivery)<br>
+      Cartões de débito e crédito na entrega, menos Banricompras<br>
+      Troco disponível<br>
+      PIX
+    </div>
+
+    <div style="flex: 1 1 250px; margin-bottom: 0.5rem;">
+      <strong>Contato:</strong><br>
+      +55 51 98577 0342<br>
+      Rua José da Maia Martins, 197<br>
+      Porto Alegre - RS<br>
+      91260-470
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <p style="margin: 0.2rem 0;">© Lasagne.com.br — Artesanal e Deliciosa</p>
+    <p style="margin: 0.2rem 0;">CNPJ 00.000.000/0000-00</p>
+    
+    <!-- Linhas "em branco" para empurrar o ícone para cima -->
+    <div style="height: 10px;"></div>
+   
+    
+    
+    <a href="https://www.instagram.com/lasagne_delivery" target="_blank">
+      <img src="insta.png" alt="Instagram" style="width: 28px; height: 28px;">
+    </a>
+    <!-- Linhas "em branco" para empurrar o ícone para cima -->
+    <div style="height: 10px;"></div>
+    <div style="height: 10px;"></div>
+  </div>
+</footer>
+  
+  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+<a class="bottom-bar-cardapio"
+   data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+   data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+   Ver Cardápio e Pedir
+</a>
+
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+
+</body>
+</html>
