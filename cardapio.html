@@ -185,6 +185,34 @@ body {
   box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
   cursor: pointer;
 }
+    .categoria-cardapio {
+  margin: 3rem auto;
+  max-width: 1000px;
+  text-align: left;
+}
+
+.grid-cardapio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.item-cardapio {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.item-cardapio img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
   </style>
 </head>
 <body>
@@ -211,86 +239,110 @@ body {
   
 
   <section>
-    <h2 style="font-size: 2rem;">Nosso Cardápio</h2>
-    <p style="font-size: 1.3rem;">Aqui você encontra todas as nossas lasanhas artesanais feitas com carinho e tradição italiana.</p>
+  <h2 style="font-size: 2rem;">Nosso Cardápio</h2>
+  <p style="font-size: 1.3rem;">Aqui você encontra todas as nossas lasanhas artesanais feitas com carinho e tradição italiana.</p>
 
-    <div class="cardapio-item">
-      <img src="nonna.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Da Nonna</strong><br>
-      Um abraço de lasanha.→  simples, clássica, como aquela que só a vó sabe fazer.→ Receita clássica de ragù alla bolognese com carne moída bovina e suína, sofrito, tomate e vinho. Cozido longo e suave, com bechamel e muito muçarela. OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-    <div class="cardapio-item">
-      <img src="serra.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Da Serra</strong><br>
-      Farta, saborosoa e tradicional.→ Ragù alla bolognese clássico: carne moída bovina e suína refogada com sofrito, tomate e vinho, cozido por horas. Com presunto, bechamel e muçarela. Receita farta e reconfortante como as mesas da Serra Gaúcha.  OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-     </div>
-    <div class="cardapio-item">
-      <img src="colonia.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Della Colonia</strong><br>
-     Frango com ervilha no molho de tomate, presunto, bechamel, muçarela . → Uma receita inspirada na mesa farta das cozinhas de nossos imigrantes italianos. Frango com ervilhas, presunto artesanal, molho cremoso e generosas camadas de muçarela. OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-    </div>
-    <div class="cardapio-item">
-      <img src="presunto.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Prociutto e Formaggio</strong><br>
-      Presunto, bechamel, muçarela. → Um clássico sem erro. Presunto e queijos derretidos entre massa fresca e molho branco. Simples, direta e irresistível.   OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-    </div>
-    <div class="cardapio-item">
-      <img src="brocoli.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Broccoli e Ricotta</strong><br>
-      Brócolis, creme de ricota e parmesão, bechamel, muçarela. → Uma combinação surpreendente e delicada: brócolis no vapor com ricota temperada, parmesão e bechamel leve. Cremosa e suave.  OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-     </div>
-    <div class="cardapio-item">
-      <img src="allanorma.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Alla Norma</strong><br>
-     Berinjela, creme de ricota e parmesão, molho de tomate, manjericão fresco, muçarela. → Um tributo à Sicília: berinjela grelhada, molho de tomate fresco, ricota cremosa e folhas de manjericão. Rústica, perfumada e cheia de caráter.   OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-     </div>
-    <div class="cardapio-item">
-      <img src="file.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Filetto e Funghi al Vino</strong><br>
-      Escalopes de filé mignon, funghi secchi, bechamel,  molho de vinho, muçarela, parmesão. → Lasanha nobre e intensa, com filé mignon selado, cogumelos secos e um molho de vinho profundo e envolvente. Raffinata per momenti speciali.   OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-     </div>
-    
-     </div>
-    <div class="cardapio-item">
-      <img src="napoletana.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Napoletana</strong><br>
-      Rica e intensa.→ Vera ricetta di Ragù Napolitano, com carnes bovina e suína em pedaços, cozido por horas no tomate, linguiça toscana, ovos cozidos, polpettine de carne, creme de ricota e parmesão, muçarela, Um banquete em camadas da Cucina Partenopea.  OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-     </div>
-    <div class="cardapio-item">
-      <img src="carbonara.png" alt="Foto da lasanha" style="width: 100px; height: 100px;">
-      <strong>Carbonara al Forno</strong><br>
-      Bacon, creme de queijos e ovos, muçarela. → A clássica Carbonara em versão gratinada: cremosa, dourada e marcante. Bacon crocante, ovos e queijos num casamento perfeito.   OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.<br>
-      1Kg - R$000,00<br>
-      500g – R$000,00
-    </div>
-     
-    <!-- Adicione aqui os outros itens seguindo o mesmo modelo acima -->
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">Lasanhas Clássicas</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+      Receitas tradicionais que remetem à mesa da nonna e aos sabores da Itália.
+    </p>
+    <div class="grid-cardapio">
+      
+      <div class="item-cardapio">
+        <img src="nonna.png" alt="Da Nonna">
+        <div>
+          <strong>Da Nonna</strong><br>
+          Receita clássica de ragù alla bolognese com carne bovina e suína, cozida por horas. Bechamel e muçarela.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
 
-  </section>
+      <div class="item-cardapio">
+        <img src="serra.png" alt="Da Serra">
+        <div>
+          <strong>Da Serra</strong><br>
+          Ragù com presunto, bechamel e muçarela. Farta e reconfortante como nas mesas da Serra Gaúcha.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
 
+      <div class="item-cardapio">
+        <img src="colonia.png" alt="Della Colonia">
+        <div>
+          <strong>Della Colonia</strong><br>
+          Frango com ervilhas, presunto artesanal, bechamel e muçarela.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="presunto.png" alt="Prociutto e Formaggio">
+        <div>
+          <strong>Prociutto e Formaggio</strong><br>
+          Presunto, bechamel e muçarela. Um clássico sem erro.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">Lasanhas Vegetais e Gourmet</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+      Sabores leves e refinados, com ingredientes especiais e combinações criativas.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>Broccoli e Ricotta</strong><br>
+          Brócolis, creme de ricota, parmesão e bechamel.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Alla Norma</strong><br>
+          Berinjela grelhada, ricota, molho de tomate e manjericão.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="file.png" alt="Filetto e Funghi al Vino">
+        <div>
+          <strong>Filetto e Funghi al Vino</strong><br>
+          Escalopes de filé mignon, funghi secchi, bechamel e molho de vinho.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="napoletana.png" alt="Napoletana">
+        <div>
+          <strong>Napoletana</strong><br>
+          Ragù napolitano, linguiça, polpettine, ovos e queijo.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="carbonara.png" alt="Carbonara al Forno">
+        <div>
+          <strong>Carbonara al Forno</strong><br>
+          Bacon, ovos, creme de queijos e muçarela gratinada.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <footer style="background-color: #1b5e20; color: white; font-size: 0.65rem; padding: 1rem 0 2rem;">
 
   <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1000px; margin: 0 auto; padding: 0 1rem;">
