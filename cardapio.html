@@ -187,14 +187,21 @@ body {
 }
     .categoria-cardapio {
   margin: 3rem auto;
-  max-width: 720px;
+  max-width: 1000px;
   text-align: left;
+  padding: 0 1rem;
 }
 
 .grid-cardapio {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cardapio {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .item-cardapio {
@@ -208,11 +215,12 @@ body {
 }
 
 .item-cardapio img {
-  width: 100px;
+  width: 80px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
+
   </style>
 </head>
 <body>
