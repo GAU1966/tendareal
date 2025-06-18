@@ -21,7 +21,7 @@
       flex: 1;
     }
 
-   .verde { background-color: #00843D; }
+    .verde { background-color: #00843D; }
     .branco { background-color: #00843D; }
     .vermelho { background-color: #00843D; }
 
@@ -111,7 +111,7 @@
     }
 
     footer {
-      background-color: #1b5e20; /* Agora verde */
+      background-color: #1b5e20;
       color: white;
       padding: 1rem;
       text-align: center;
@@ -136,7 +136,23 @@
       width: 32px;
       height: 32px;
     }
-.bandeira, header {
+
+    .cardapio-item {
+      text-align: left;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1.5rem;
+    }
+
+    .cardapio-item img {
+      float: right;
+      width: 100px;
+      height: auto;
+      margin-left: 1rem;
+      border-radius: 8px;
+    }
+ .bandeira, header {
   position: fixed;
   left: 0;
   right: 0;
@@ -169,6 +185,42 @@ body {
   box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
   cursor: pointer;
 }
+    .categoria-cardapio {
+  margin: 3rem auto;
+  max-width: 1000px;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.grid-cardapio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cardapio {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.item-cardapio {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.item-cardapio img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
   </style>
 </head>
 <body>
@@ -178,47 +230,438 @@ body {
     <div class="branco"></div>
     <div class="vermelho"></div>
   </div>
-
-  <header>
+ <header>
   <a href="index.html" class="logo">
     <img src="logotenda.png" alt="Tenda Real" style="max-height: 60px;">
   </a>
   <nav>
-    <a href="cardapio.html">Cardápio</a>
+    <a href="entrega.html">Área de Entrega</a>
     <a href="contato.html">Contato</a>
     <span class="glf-button" data-glf-cuid="cf891a19-fef9-4288-9b7b-6ccb82f21e8b"
       data-glf-ruid="dcfe5cd9-38fc-41f2-8905-093684ec1425" 
     >Ver Cardápio e Pedir</span>
   </nav>
-</header> 
-
+</header>
   
-  <main>
-  
-<h1 style="text-align: center; margin-top: 3rem;">Áreas de Entrega em Porto Alegre</h1>
-    
-    <div class="taxas" style="padding: 1.5rem; max-width: 800px; margin: auto;  font-size: 1.1rem; line-height: 1.6;">
-      <p><strong>Taxas de entrega:</strong></p>
 
-      <p><strong>Área 1 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 20,00</strong><br>
-      • Auxiliadora • Bom Fim • Bom Jesus • Centro Histórico • Chácara das Pedras • Cidade Baixa • Cristo Redentor • Farroupilha • Petrópolis • Jardim Botânico • Jardim Carvalho • Jardim Itu-Sabará • Jardim Dona Leopoldina • Jardim do Salso • Mário Quintana • Passo das Pedras • Santa Cecilia • Três Figueiras • Vila Ipiranga • Vila Jardim</p>
+  <section>
+  <h2 style="font-size: 2rem;">Nosso Cardápio</h2>
+  <p style="font-size: 1.3rem;">Aqui você encontra todas as nossas lasanhas artesanais feitas com carinho e tradição italiana.</p>
 
-      <p><strong>Área 2 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 23,00</strong><br>
-      • Bela Vista • Boa Vista • Independência • Floresta • Jardim Floresta • Jardim Lindoia • Jardim São Pedro • Higienópolis • Moinhos de Vento • Mont'Serrat • Passo d'Areia • Rio Branco • Rubem Berta • São João • São Sebastião • Sarandi</p>
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">ESPECIAIS DA ESTAÇÃO - SOPAS ÁRABES - UM INVERNO COM ALMA DO ORIENTE.</h3>
+    <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;">
+      ENCOMENDAS COM 24h DE ANTECEDÊNCIA - OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+    </p>
+    <div class="grid-cardapio">
+      
+      <div class="item-cardapio">
+        <img src="nonna.png" alt="Da Nonna">
+        <div>
+          <strong>Shorbat Adas - Sopa de Lentilhas </strong><br>
+          Receita clássica da culinária do Oriente Médio, (شوربة عدس ) é muito apreciada em toda a região, 
+          especialmente durante o inverno e o Ramadã.
+          Rica em fibras e proteínas, um prato “do campo”,
+          robusto e saudável. Lentilha, carne bovina, cebola, cenoura, vagem, espinafre e especiarias orientais.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
 
-      <p><strong>Área 3 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 25,00</strong><br>
-      • Azenha • Glória • Menino Deus • Nonoai • Partenon • Praia de Belas • Santa Maria Goretti • Santa Tereza • Santana • Santo Antônio • Teresópolis</p>
+      <div class="item-cardapio">
+        <img src="serra.png" alt="Da Serra">
+        <div>
+          <strong>Fasoulia</strong><br>
+          Fasoulia ( árabe : فاصوليا) ou fasolada ( grego : φασολάδα) na culinária turca é chamado kuru fasulye,
+          é a “feijoada” do Oriente Médio. De origem grega e muito apreciada em todo o Levante. Feijão branco, carne bovina,
+          tomate, cebola, e especiarias orientais.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
 
-      <p><strong>Área 4 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 30,00</strong><br>
-      • Cavalhada • Camaquã • Vila Assunção • Vila Conceição • Sétimo Céu • Tristeza</p>
-
-      <p><strong>Área 5 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 35,00</strong><br>
-      • Aberta dos Morros • Campo Novo • Espírito Santo • Guarujá • Hípica • Ipanema • Jardim Isabel • Vila Nova • Serraria</p>
+      
     </div>
- 
-  </main>
+  </div>
 
- <footer style="background-color: #000000; color: white; font-size: 0.65rem; padding: 1rem 0 2rem;">
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">MENU DAS MIL E UMA NOITES - SUGESTÃO PARA 2 PESSOAS</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+     ENCOMENDAS COM 24h DE ANTECEDÊNCIA - OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>Menu das Mil e Uma Noites (1)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne,
+          2 Kibes Fritos, Mjadra 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Menu das Mil e uma Noites (2)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne, 2 Kibes Fritos, Arroz Charie 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="file.png" alt="Filetto e Funghi al Vino">
+        <div>
+          <strong>Filetto e Funghi al Vino</strong><br>
+          Escalopes de filé mignon, funghi secchi, bechamel e molho de vinho.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="napoletana.png" alt="Napoletana">
+        <div>
+          <strong>Napoletana</strong><br>
+          Ragù napolitano, linguiça, polpettine, ovos e queijo.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="carbonara.png" alt="Carbonara al Forno">
+        <div>
+          <strong>Carbonara al Forno</strong><br>
+          Bacon, ovos, creme de queijos e muçarela gratinada.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+           
+    </div>
+  </div>
+        <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">BANQUETE ÁRABE - ENCOMENDA COM 48H DE ANTECEDÊNCIA.TAXA DE ENTREGA ESPECIAL</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+     Nossas sugestões de Banquetes Árabes são escolhas perfeitas para eventos e comemorações,
+      como aniversários, encontros familiares e corporativos.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>Sugestão para 4 pessoas (1)</strong><br>
+         Homus 200g, Labneh 200g, Babaganoush 200g, Tabule 350g, Pão Sírio Artesanal 500g,
+          Esfihas Fechadas de Carne / 12 de 40g, Kibes Fritos / 12 de 40g, Mjadra 500g,
+          Esfihas Crumble de Maçã /12 de 40g. OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Sugestão para 4 pessoas (2)</strong><br>
+         Homus 200g, Labneh 200g, Babaganoush 200g, Tabule 350g, Pão Sírio Artesanal 500g,
+          Esfihas Fechadas de Carne / 12 de 40g, Kibes Fritos / 12 de 40g, Arroz Charie 500g,
+          Esfihas Crumble de Maçã /12 de 40g. OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+      
+<div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Sugestão para 6 pessoas (1)</strong><br>
+         Homus 300g, Labneh 300g, Babaganoush 300g, Tabule 350g, Pão Sírio Artesanal 500g,
+          Esfihas Fechadas de Carne / 18 de 40g, Kibes Fritos / 18 de 40g, Mjadra 1Kg,
+          Esfihas Crumble de Maçã /18 de 40g. OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+      
+<div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Sugestão para 6 pessoas (2)</strong><br>
+        Homus 300g, Labneh 300g, Babaganoush 300g, Tabule 350g, Pão Sírio Artesanal 500g,
+          Esfihas Fechadas de Carne / 18 de 40g, Kibes Fritos / 18 de 40g, Arroz Charie 1Kg,
+          Esfihas Crumble de Maçã /18 de 40g. OS PRODUTOS CONTÊM GLÚTEN E LACTOSE..
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+      </div>
+    </div>
+      
+    <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Sugestão para 8 pessoas (1)</strong><br>
+        Homus 350g, Labneh 350g, Babaganoush 350g, Tabule 500g,
+          Pão Sírio Artesanal 1Kg, Esfihas Fechadas de Carne /24 de 40g, Kibes Fritos /24 de 40g,
+          Mjadra 1Kg, Esfihas Crumble de Maçã /24 de 40g, OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+      </div>
+    </div>
+
+     <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Sugestão para 8 pessoas (2)</strong><br>
+       Homus 350g, Labneh 350g, Babaganoush 350g, Tabule 500g,
+          Pão Sírio Artesanal 1Kg, Esfihas Fechadas de Carne /24 de 40g, Kibes Fritos /24 de 40g,
+          Arroz Charie 1Kg, Esfihas Crumble de Maçã /24 de 40g, OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+    </div>
+ </div>
+      
+
+    </div>
+  </div>
+
+     <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">PARA CELEBRAR - DELICIOSAS PORÇÕES DE MINI KIBES E ESFIHAS</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+     ENCOMENDAS COM 48h DE ANTECEDÊNCIA - OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>MIni Kibe Frito - 25 unidades de 40g</strong><br>
+         Excelente opção para receber os familiares e amigos em reuniões festivas.
+          Carne bovina moída, trigo bulghur, cebola e temperado com especiarias,
+          recheado com guisado temperado com azeitonas.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Mini Esfiha Fechada - 25 unidades de 40g</strong><br>
+         Carne bovina, cebola, tomate, hortelã, manjerona, azeite de oliva, tahine,
+          suco de limão, canela em pó, pimenta e sal.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Mini Esfiha Aberta - 25 unidades de 40g</strong><br>
+         Carne bovina, cebola, tomate, hortelã, manjerona, azeite de oliva, tahine,
+          suco de limão, canela em pó, pimenta e sal.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+       <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Mini Esfiha Aberta Maçã - 25 unidades de 40g</strong><br>
+         A combinação do tradicional streusel ou crumble,
+          a farofa das nossas conhecidas cucas, com a clássica receita de maçãs maceradas no açúcar demerara e canela,
+          uma delicia!
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+   
+    </div>
+  </div>
+
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">PASTAS, SALADAS E ACOMPANHAMENTOS</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+     ENCOMENDAS COM 24h DE ANTECEDÊNCIA - OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>Homus</strong><br>
+        Homus ou hummus (em árabe: حُمُّص; em hebraico: חומוס) é um alimento típico da cultura do Oriente Próximo,
+         feito de um purê frio de grão-de-bico cozido, tahíne (pasta de gergelim), azeite, suco de limão, sal e alho.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Labneh (iogurte grego)</strong><br>
+         Iogurte grego, süzme, labneh ou coalhada seca no Brasil (aqui considerado um tipo de queijo),
+          é o iogurte de que foi removida a maior parte do soro. O nosso tem a consistência firme e cremosa,
+          sem conservantes, de produção limitada seguindo a maneira mediterrânea de preparo.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Babaganoush</strong><br>
+         Deliciosa salada feita de purê de berinjela assada, tahine (pasta de gergelim),
+          suco de limão, e outros condimentos. No Líbano, é consumido como uma entrada,
+          no Egito é servido como um acompanhamento de outros pratos.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Tabule</strong><br>
+         Tradicional salada do Levante,
+          tem sua origem nas montanhas do Líbano e Síria, elaborada à base de trigo burghul,
+          salsa, cebola, tomate, hortelã e pepino.os.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Cuscuz Marroquino</strong><br>
+        Cuscuz Marroquino – كسكس مغربي ou kuskus maghribi, como é chamado nas terras do Magreb.
+          Combinando sêmola de trigo importada, grão-de-bico, lentilhas, ervas frescas, amêndoas e cebola roxa grelhada,
+          essa delícia do norte da África chega para ser a sua nova escolha de conforto nutritivo.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+     
+
+    </div>
+  </div>
+
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">PRATOS QUENTES E CARNES</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+     ENCOMENDAS COM 24h DE ANTECEDÊNCIA - OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>Menu das Mil e Uma Noites (1)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne,
+          2 Kibes Fritos, Mjadra 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Menu das Mil e uma Noites (2)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne, 2 Kibes Fritos, Arroz Charie 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+        </div>
+  </div>
+
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">ESFIHAS</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+     ENCOMENDAS COM 24h DE ANTECEDÊNCIA - OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>Menu das Mil e Uma Noites (1)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne,
+          2 Kibes Fritos, Mjadra 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Menu das Mil e uma Noites (2)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne, 2 Kibes Fritos, Arroz Charie 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      
+  </div>
+  </div>
+
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">PÃES E BOLOS</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+     ENCOMENDAS COM 24h DE ANTECEDÊNCIA - OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>Menu das Mil e Uma Noites (1)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne,
+          2 Kibes Fritos, Mjadra 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Menu das Mil e uma Noites (2)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne, 2 Kibes Fritos, Arroz Charie 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+        </div>
+  </div>
+
+  <div class="categoria-cardapio">
+    <h3 style="font-size: 1.6rem; color: #b30000;">MARMITA ÁRABE - ALMOÇO DE SÁBADO - ENCOMENDAS ATÉ SEXTA-FEIRA ÀS 20H</h3>
+    <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+     OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.
+    </p>
+    <div class="grid-cardapio">
+
+      <div class="item-cardapio">
+        <img src="brocoli.png" alt="Broccoli e Ricotta">
+        <div>
+          <strong>Menu das Mil e Uma Noites (1)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne,
+          2 Kibes Fritos, Mjadra 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+
+      <div class="item-cardapio">
+        <img src="allanorma.png" alt="Alla Norma">
+        <div>
+          <strong>Menu das Mil e uma Noites (2)</strong><br>
+         Homus 150g, Labneh 150g, Babaganoush 150g, Tabule 200g, Pão Sírio Artesanal 500g,
+          2 Esfihas Fechadas de Carne, 2 Kibes Fritos, Arroz Charie 300g, 2 Esfihas Crumble de Maçã.
+          <br><em>1Kg - R$000,00 | 500g - R$000,00</em>
+        </div>
+      </div>
+   
+ 
+</section>
+<footer style="background-color: #1b5e20; color: white; font-size: 0.65rem; padding: 1rem 0 2rem;">
 
   <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1000px; margin: 0 auto; padding: 0 1rem;">
 
@@ -232,14 +675,14 @@ body {
     <div style="flex: 1 1 250px; margin-bottom: 0.5rem;">
       <strong>Formas de pagamento:</strong><br>
       Dinheiro (Delivery)<br>
-      Cartões de débito e crédito na entrega, menos Branricompras<br>
+      Cartões de débito e crédito na entrega, menos Banricompras<br>
       Troco disponível<br>
       PIX
     </div>
 
     <div style="flex: 1 1 250px; margin-bottom: 0.5rem;">
       <strong>Contato:</strong><br>
-      +55 51 98577 0336<br>
+      +55 51 98577 0342<br>
       Rua José da Maia Martins, 197<br>
       Porto Alegre - RS<br>
       91260-470
@@ -248,7 +691,7 @@ body {
   </div>
 
   <div style="text-align: center; margin-top: 1.5rem;">
-    <p style="margin: 0.2rem 0;">© Tenda Real Panificio Artesanal</p>
+    <p style="margin: 0.2rem 0;">© Lasagne.com.br — Artesanal e Deliciosa</p>
     <p style="margin: 0.2rem 0;">CNPJ 00.000.000/0000-00</p>
     
     <!-- Linhas "em branco" para empurrar o ícone para cima -->
@@ -256,7 +699,7 @@ body {
    
     
     
-    <a href="https://www.instagram.com/tenda_real_panificio_artesanal" target="_blank">
+    <a href="https://www.instagram.com/lasagne_delivery" target="_blank">
       <img src="insta.png" alt="Instagram" style="width: 28px; height: 28px;">
     </a>
     <!-- Linhas "em branco" para empurrar o ícone para cima -->
@@ -264,19 +707,17 @@ body {
     <div style="height: 10px;"></div>
   </div>
 </footer>
-
-
-  <!-- WhatsApp logo oficial -->
-  <a class="whatsapp-float" href="https://wa.me/5551985770336" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 32px; height: 32px;">
+  
+  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 
 <a class="bottom-bar-cardapio"
-   data-glf-cuid="cf891a19-fef9-4288-9b7b-6ccb82f21e8b"
-       data-glf-ruid="dcfe5cd9-38fc-41f2-8905-093684ec1425" 
-   >Ver Cardápio e Pedir
+  <span class="glf-button" data-glf-cuid="cf891a19-fef9-4288-9b7b-6ccb82f21e8b"
+      data-glf-ruid="dcfe5cd9-38fc-41f2-8905-093684ec1425" 
+    >Ver Cardápio e Pedir</span>
 </a>
-  <!-- GlóriaFood Script -->
+
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
 </body>
