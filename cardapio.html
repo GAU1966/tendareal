@@ -27,7 +27,7 @@
 
     header {
   background-color: #b30000;
-  padding: 0.4rem 1rem;
+  padding: 0.8rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,16 +198,12 @@ body {
   gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header nav span.glf-button {
-    margin-top: 0.5rem;
+@media (min-width: 768px) {
+  .grid-cardapio {
+    grid-template-columns: 1fr 1fr;
   }
 }
+
 .item-cardapio {
   display: flex;
   align-items: flex-start;
@@ -247,7 +243,7 @@ body {
   </nav>
 </header>
   
-<div style="height: 80px;"></div>
+
   <section>
   <h2 style="font-size: 2rem;">Nosso Cardápio</h2>
   <p style="font-size: 1.3rem;">ENCOMENDE AGORA NOSSAS ESPECIALIDADES ÁRABES EM PORTO ALEGRE</p>
