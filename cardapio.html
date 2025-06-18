@@ -21,17 +21,18 @@
       flex: 1;
     }
 
-   .verde { background-color: #00843D; }
+    .verde { background-color: #00843D; }
     .branco { background-color: #00843D; }
     .vermelho { background-color: #00843D; }
-   header {
-  background-color: #b30000;
-  padding: 0.4rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
+
+    header {
+      background-color: #b30000;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
     header h1 {
       color: white;
@@ -110,7 +111,7 @@
     }
 
     footer {
-      background-color: #b30000;
+      background-color: #1b5e20;
       color: white;
       padding: 1rem;
       text-align: center;
@@ -135,7 +136,23 @@
       width: 32px;
       height: 32px;
     }
-    .bandeira, header {
+
+    .cardapio-item {
+      text-align: left;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1.5rem;
+    }
+
+    .cardapio-item img {
+      float: right;
+      width: 100px;
+      height: auto;
+      margin-left: 1rem;
+      border-radius: 8px;
+    }
+ .bandeira, header {
   position: fixed;
   left: 0;
   right: 0;
@@ -168,7 +185,41 @@ body {
   box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
   cursor: pointer;
 }
- 
+    .categoria-cardapio {
+  margin: 3rem auto;
+  max-width: 1000px;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.grid-cardapio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cardapio {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.item-cardapio {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.item-cardapio img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
 
   </style>
 </head>
