@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lasagne</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    .bandeira {
+      display: flex;
+      height: 10px;
+    }
+
+    .bandeira div {
+      flex: 1;
+    }
+
+    .verde { background-color: #009246; }
+    .branco { background-color: #F1F2F1; }
+    .vermelho { background-color: #CE2B37; }
+
+    header {
+      background-color: #b30000;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a, nav span.glf-button {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: 2px solid white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    nav span.glf-button {
+      background-color: orange;
+      border: 2px solid orange;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .intro img {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .intro p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .alma {
+      background-color: #1b5e20;
+      color: white;
+    }
+
+    .alma p {
+      font-size: 1.3rem;
+    }
+
+    .glf-button {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #1b5e20; /* Agora verde */
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+.bandeira, header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.bandeira {
+  top: 0;
+}
+
+header {
+  top: 10px; /* logo abaixo da bandeira */
+}
+
+body {
+  padding-top: 150px; /* espaço reservado para a bandeira + header */
+}
+.bottom-bar-cardapio {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 500; /* menor que o WhatsApp (z-index: 999) */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+
+  <div class="bandeira">
+    <div class="verde"></div>
+    <div class="branco"></div>
+    <div class="vermelho"></div>
+  </div>
+
+  <header>
+  <a href="index.html" class="logo">
+    <img src="logo1t.png" alt="Lasagne" style="max-height: 60px;">
+  </a>
+  <nav>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="contato.html">Contato</a>
+    <span class="glf-button"
+      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+      Ver Cardápio e Pedir
+    </span>
+  </nav>
+</header> 
+
+  
+  <main>
+  
+<h1 style="text-align: center; margin-top: 3rem;">Áreas de Entrega em Porto Alegre</h1>
+    
+    <div class="taxas" style="padding: 1.5rem; max-width: 800px; margin: auto;  font-size: 1.1rem; line-height: 1.6;">
+      <p><strong>Taxas de entrega:</strong></p>
+
+      <p><strong>Área 1 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 20,00</strong><br>
+      • Auxiliadora • Bom Fim • Bom Jesus • Centro Histórico • Chácara das Pedras • Cidade Baixa • Cristo Redentor • Farroupilha • Petrópolis • Jardim Botânico • Jardim Carvalho • Jardim Itu-Sabará • Jardim Dona Leopoldina • Jardim do Salso • Mário Quintana • Passo das Pedras • Santa Cecilia • Três Figueiras • Vila Ipiranga • Vila Jardim</p>
+
+      <p><strong>Área 2 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 23,00</strong><br>
+      • Bela Vista • Boa Vista • Independência • Floresta • Jardim Floresta • Jardim Lindoia • Jardim São Pedro • Higienópolis • Moinhos de Vento • Mont'Serrat • Passo d'Areia • Rio Branco • Rubem Berta • São João • São Sebastião • Sarandi</p>
+
+      <p><strong>Área 3 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 25,00</strong><br>
+      • Azenha • Glória • Menino Deus • Nonoai • Partenon • Praia de Belas • Santa Maria Goretti • Santa Tereza • Santana • Santo Antônio • Teresópolis</p>
+
+      <p><strong>Área 4 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 30,00</strong><br>
+      • Cavalhada • Camaquã • Vila Assunção • Vila Conceição • Sétimo Céu • Tristeza</p>
+
+      <p><strong>Área 5 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 35,00</strong><br>
+      • Aberta dos Morros • Campo Novo • Espírito Santo • Guarujá • Hípica • Ipanema • Jardim Isabel • Vila Nova • Serraria</p>
+    </div>
+ 
+  </main>
+
+ <footer style="background-color: #000000; color: white; font-size: 0.65rem; padding: 1rem 0 2rem;">
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1000px; margin: 0 auto; padding: 0 1rem;">
+
+    <div style="flex: 1 1 250px; margin-bottom: 0.5rem;">
+      <strong>Horário de funcionamento:</strong><br>
+      Seg - Sáb: 10h - 17h<br>
+      <strong>Entrega:</strong><br>
+      Seg - Sáb: 11h - 21h
+    </div>
+
+    <div style="flex: 1 1 250px; margin-bottom: 0.5rem;">
+      <strong>Formas de pagamento:</strong><br>
+      Dinheiro (Delivery)<br>
+      Cartões de débito e crédito na entrega, menos Branricompras<br>
+      Troco disponível<br>
+      PIX
+    </div>
+
+    <div style="flex: 1 1 250px; margin-bottom: 0.5rem;">
+      <strong>Contato:</strong><br>
+      +55 51 98577 0336<br>
+      Rua José da Maia Martins, 197<br>
+      Porto Alegre - RS<br>
+      91260-470
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <p style="margin: 0.2rem 0;">© Tenda Real Panificio Artesanal</p>
+    <p style="margin: 0.2rem 0;">CNPJ 00.000.000/0000-00</p>
+    
+    <!-- Linhas "em branco" para empurrar o ícone para cima -->
+    <div style="height: 10px;"></div>
+   
+    
+    
+    <a href="https://www.instagram.com/tenda_real_panificio_artesanal" target="_blank">
+      <img src="insta.png" alt="Instagram" style="width: 28px; height: 28px;">
+    </a>
+    <!-- Linhas "em branco" para empurrar o ícone para cima -->
+    <div style="height: 10px;"></div>
+    <div style="height: 10px;"></div>
+  </div>
+</footer>
+
+
+  <!-- WhatsApp logo oficial -->
+  <a class="whatsapp-float" href="https://wa.me/5551985770336" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 32px; height: 32px;">
+  </a>
+
+  <a class="bottom-bar-cardapio"
+   data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+   data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+   Ver Cardápio e Pedir
+</a>
+  <!-- GlóriaFood Script -->
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+
+</body>
+</html>
