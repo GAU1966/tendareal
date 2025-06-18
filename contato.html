@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Lasagne</title>
+  <title>Tenda Real</title>
   <style>
     body {
       margin: 0;
@@ -12,28 +12,41 @@
       color: #333;
     }
 
-    .faixa-tricolor {
+    .bandeira {
+      display: flex;
       height: 10px;
-      background: linear-gradient(to right, #009246 33.33%, #F1F2F1 33.33% 66.66%, #CE2B37 66.66%);
     }
 
+    .bandeira div {
+      flex: 1;
+    }
+
+    .verde { background-color: #00843D; }
+    .branco { background-color: #00843D; }
+    .vermelho { background-color: #00843D; }
+
     header {
-      background-color: #b30000;
-      padding: 0.8rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+  background-color: #b30000;
+  padding: 0.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+    header h1 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
     }
 
     nav {
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
-      align-items: center;
     }
 
-    nav a {
+    nav a, nav span.glf-button {
       text-decoration: none;
       color: white;
       font-weight: bold;
@@ -41,46 +54,60 @@
       padding: 0.2rem 0.6rem;
       border-radius: 5px;
       font-size: 1rem;
+      cursor: pointer;
     }
 
     nav span.glf-button {
       background-color: orange;
-      color: white;
-      font-weight: bold;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      font-size: 1rem;
-      border: 0px solid white;
-      cursor: pointer;
-      display: inline-block;
-      box-sizing: border-box;
+      border: 2px solid orange;
     }
 
-    nav span.glf-button:hover {
-      background-color: #e69500;
-    }
-
-    main {
-      max-width: 600px;
-      margin: 3rem auto;
-      padding: 1rem;
+    .intro {
       text-align: center;
+      padding: 2rem;
     }
 
-    .email-link {
+    .intro img {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .intro p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .alma {
+      background-color: #1b5e20;
+      color: white;
+    }
+
+    .alma p {
       font-size: 1.3rem;
+    }
+
+    .glf-button {
+      display: inline-block;
+      margin-top: 1rem;
       background-color: orange;
       color: white;
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2rem;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
       font-weight: bold;
-    }
-
-    .email-link:hover {
-      background-color: #e69500;
+      cursor: pointer;
+      font-size: 1rem;
     }
 
     footer {
@@ -88,7 +115,6 @@
       color: white;
       padding: 1rem;
       text-align: center;
-      margin-top: 3rem;
     }
 
     .whatsapp-float {
@@ -110,21 +136,39 @@
       width: 32px;
       height: 32px;
     }
-.float-cardapio {
+
+    .cardapio-item {
+      text-align: left;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1.5rem;
+    }
+
+    .cardapio-item img {
+      float: right;
+      width: 100px;
+      height: auto;
+      margin-left: 1rem;
+      border-radius: 8px;
+    }
+ .bandeira, header {
   position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: orange;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.6rem;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  z-index: 998;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  cursor: pointer;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.bandeira {
+  top: 0;
+}
+
+header {
+  top: 10px; /* logo abaixo da bandeira */
+}
+
+body {
+  padding-top: 150px; /* espaço reservado para a bandeira + header */
 }
 .bottom-bar-cardapio {
   position: fixed;
@@ -141,6 +185,46 @@
   box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
   cursor: pointer;
 }
+    .categoria-cardapio {
+  margin: 3rem auto;
+  max-width: 1000px;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.grid-cardapio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav span.glf-button {
+    margin-top: 0.5rem;
+  }
+}
+.item-cardapio {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.item-cardapio img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
   </style>
 </head>
 <body>
