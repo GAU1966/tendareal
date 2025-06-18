@@ -21,13 +21,12 @@
       flex: 1;
     }
 
-    .verde { background-color: #00843D; }
+   .verde { background-color: #00843D; }
     .branco { background-color: #00843D; }
     .vermelho { background-color: #00843D; }
-
-    header {
+   header {
   background-color: #b30000;
-  padding: 0.8rem 1rem;
+  padding: 0.4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +110,7 @@
     }
 
     footer {
-      background-color: #1b5e20;
+      background-color: #b30000;
       color: white;
       padding: 1rem;
       text-align: center;
@@ -136,23 +135,7 @@
       width: 32px;
       height: 32px;
     }
-
-    .cardapio-item {
-      text-align: left;
-      margin: 2rem auto;
-      max-width: 800px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 1.5rem;
-    }
-
-    .cardapio-item img {
-      float: right;
-      width: 100px;
-      height: auto;
-      margin-left: 1rem;
-      border-radius: 8px;
-    }
- .bandeira, header {
+    .bandeira, header {
   position: fixed;
   left: 0;
   right: 0;
@@ -185,141 +168,7 @@ body {
   box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
   cursor: pointer;
 }
-    .categoria-cardapio {
-  margin: 3rem auto;
-  max-width: 1000px;
-  text-align: left;
-  padding: 0 1rem;
-}
-
-.grid-cardapio {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-/* Oculta ou mostra versões dependendo do tamanho da tela */
-.desktop-only {
-  display: inline-block;
-}
-
-.mobile-only {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .desktop-only {
-    display: none !important;
-  }
-
-  .mobile-only {
-    display: block !important;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    background-color: orange;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1rem;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-    z-index: 998;
-  }
-}
-✅ Resultado:
-Em telas maiores (desktop): o botão continua no menu do cabeçalho.
-
-Em telas menores (celular): aparece um botão fixo na parte inferior, centralizado.
-
-Se quiser que eu insira isso direto no seu código atual, só avisar!
-
-
-
-
-
-
-
-
-
-Você disse:
-faça vamos ver
-
-
-O ChatGPT disse:
-Claro! Aqui está o código atualizado para que o botão “Ver cardápio e pedir” fique centralizado na parte inferior da tela em dispositivos móveis, mas permaneça como está no desktop:
-
-html
-Copiar
-Editar
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tenda Real</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-
-    .botao-flutuante {
-      position: absolute;
-      right: 50px;
-      top: 400px;
-      padding: 10px 20px;
-      background-color: #7a4b25;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1em;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    /* Versão para celular */
-    @media (max-width: 768px) {
-      .botao-flutuante {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: auto;
-        right: auto;
-        z-index: 1000;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ...outros conteúdos da página... -->
-
-  <a href="https://wa.me/5551999999999" class="botao-flutuante">Ver cardápio e pedir</a>
-
-</body>
-</html>
-O que foi feito:
-Para desktops, o botão continua com position: absolute em top: 400px e right: 50px, como estava antes.
-
-Para celulares (largura ≤ 768px), ele muda para position: fixed, centralizado horizontalmente no rodapé com bottom: 20px.
-
-Se quiser testar, copie e cole esse código completo em um arquivo .html e abra no navegador. Posso adaptar conforme o layout da tua página completa também. Deseja isso?
-
-
-
-
-
-
-
-
-
+ 
 
   </style>
 </head>
