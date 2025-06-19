@@ -164,13 +164,19 @@ body {
   padding: 0.8rem;
   font-size: 1rem;
   font-weight: bold;
-  z-index: 500; /* menor que o WhatsApp (z-index: 999) */
+  z-index: 500;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
   cursor: pointer;
   display: flex;
-align-items: center;
-justify-content: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 
+.bottom-bar-cardapio::before,
+.bottom-bar-cardapio::after {
+  content: "";
+  flex: 1;
 }
  
 
